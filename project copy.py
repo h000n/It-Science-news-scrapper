@@ -65,8 +65,8 @@ def physi():
     for index in range(len(news_list)):
         title = news_list[index].get_text()
         result = ""
-        client_id = "jIS6lUO8XFEk49xSyoDC"  # 개발자센터에서 발급받은 Client ID 값
-        client_secret = "dZXsKl6acA"  # 개발자센터에서 발급받은 Client Secret 값
+        client_id = ""  # 개발자센터에서 발급받은 Client ID 값
+        client_secret = ""  # 개발자센터에서 발급받은 Client Secret 값
         encText = urllib.parse.quote(title)
         data = "source=en&target=ko&text=" + encText
         url = "https://openapi.naver.com/v1/papago/n2mt"
@@ -88,8 +88,8 @@ def nature():
     for index in range(len(news_list)):
         title = news_list[index].get_text().replace(" ","").replace("\n","")
         result = ""
-        client_id = "F2bmQndPnttgzPDQG3XB"  # 개발자센터에서 발급받은 Client ID 값
-        client_secret = "YJ3zLPkygL"  # 개발자센터에서 발급받은 Client Secret 값
+        client_id = ""  # 개발자센터에서 발급받은 Client ID 값
+        client_secret = ""  # 개발자센터에서 발급받은 Client Secret 값
         encText = urllib.parse.quote(title)
         data = "source=en&target=ko&text=" + encText
         url = "https://openapi.naver.com/v1/papago/n2mt"
@@ -110,8 +110,8 @@ def science():
     news_list = soup.find("ul", attrs={"class": "headline-list"}).find_all("li", limit=10)
     for index in range(len(news_list)):
         title = news_list[index].find_all("a")[1].get_text().strip()
-        client_id = "wY32gmhcHn_imArMcLWs"  # 개발자센터에서 발급받은 Client ID 값
-        client_secret = "MGnmqZxmJF"  # 개발자센터에서 발급받은 Client Secret 값
+        client_id = ""  # 개발자센터에서 발급받은 Client ID 값
+        client_secret = ""  # 개발자센터에서 발급받은 Client Secret 값
         encText = urllib.parse.quote(title)
         data = "source=en&target=ko&text=" + encText
         url = "https://openapi.naver.com/v1/papago/n2mt"
